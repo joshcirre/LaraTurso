@@ -39,6 +39,17 @@ return [
             'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
         ],
 
+        'turso' => [
+            'driver' => 'turso',
+            'db_url' => env('DB_URL', 'http://localhost:8080'),
+            'access_token' => env('DB_ACCESS_TOKEN'),
+            'db_replica' => env('DB_REPLICA'),
+            'database' => null, // Leave this null
+            'prefix' => env('DB_PREFIX', ''),
+            'foreign_key_constraints' => env('DB_FOREIGN_KEYS', true),
+            'sticky' => env('DB_STICKY', true),
+        ],
+
         'mysql' => [
             'driver' => 'mysql',
             'url' => env('DB_URL'),
